@@ -1,4 +1,4 @@
-function AppCtrl(){
+function AppCtrl($scope){
     console.log("Hello world from controller");
 
     person1 = {
