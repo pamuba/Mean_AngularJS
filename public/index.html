@@ -16,7 +16,7 @@
   </head>
   <body>
 
-      <div class="container">
+      <div class="container" ng-controller="AppCtrl">
         <h1>Contact List App</h1>
 
         <table class="table">
@@ -27,9 +27,17 @@
                     <th>Number</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr ng-repeat="cotact in contactlist">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.number}}</td>
+                </tr>
+            </tbody>
         </table>
       </div>
    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <script src="controllers/controller.js"></script>
   </body>
 </html>
