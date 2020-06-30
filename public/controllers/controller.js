@@ -1,5 +1,8 @@
-function AppCtrl($scope){
+function AppCtrl($scope, $http){
     console.log("Hello world from controller");
+
+    //route to get the data from 
+    $http.get('/contactlist')
 
     person1 = {
         name:"Jack",
