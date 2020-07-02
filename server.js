@@ -40,6 +40,15 @@ app.delete('/contactlist/:id', function(req, res){
         res.json(doc);
     })
 })
+
+app.get('/contactlist/:id', function(req, res){
+    var id = req.params.id;
+    console.log(id);
+    db.contactlist.findOne({_id:mongojs.ObjectId(id)}, function(err, doc){
+        res.json(doc);
+    })
+});
+
 app.listen(3000);
 console.log("Server running on port 3000")
 
